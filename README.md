@@ -1,5 +1,5 @@
 # Automation-Test-Project
-A practical automation project that enhances Selenium-based testing with advanced debugging capabilities - helping testers identify, log, and resolve test failures faster and more effectively.
+A practical automation project that enhances Selenium-based testing with **advanced debugging** and **cookie-powered login reuse** — helping testers identify failures faster, eliminate login repetition, and keep secrets safe via `.env`.
 
 
 
@@ -20,6 +20,8 @@ This framework automates login functionality on the [Automation Exercise](https:
 - Allure Reporting
 
 - Smart logging with screenshots on failure
+- Cookie-based session reuse  
+- `.env` support for credentials and secure environment variables
 
 
 
@@ -95,54 +97,57 @@ allure serve target/allure-results
 
 - 🧾 Stores **clear failure reasons** (e.g., "Element not found") in the log file.
 
-- 🧹 Automatically clears old screenshots and logs on each run.
-
-- 🔄 Simple, no external listener or utility class—**all in one BaseClass**.
-
-
-
----
-
-
-
-
-## 🚀 How It All Works Together
-
-
-
-Each test runs under a structured lifecycle:
-
-- The browser launches at the suite start.
-
-- Each method logs its outcome (pass, fail, skip) in `test-log.txt`.
-
-- On failure, a screenshot is captured, stored, and linked to Allure.
-
-- Everything resets cleanly for each test run under `target/`.
-
-
-
-This setup makes it easier to identify bugs faster, integrate into CI/CD pipelines, and build more resilient test suites without unnecessary complexity.
+- 🔁 Cookie-based login skip (load cookies if valid, re-login if expired).
+- 🔐 Uses `.env` file to load credentials securely.
+- 🧹 Auto-clears old logs/screenshots per run.
 
 
 
 ---
 
 
+
+
+### 🍪 How Cookie Reuse Works
+
+- ✅ On the **first login**, session cookies are saved into a `cookies.json` file.
+- 🔁 On the next run:
+  - If cookies are **still valid**, they are **reused** to skip login entirely.
+  - If cookies are **expired**, a **fresh login is triggered**, and new cookies are saved.
+
+🧠 We use **Gson** for clean and structured cookie serialization & deserialization.
+
+---
+
+### 🧪 How It All Works Together
+
+Each test runs through a structured lifecycle for maximum clarity and minimal noise:
+
+- 🚀 The browser is launched once at the suite start.
+- 📝 Each method logs its status (**pass**, **fail**, **skip**) in `test-log.txt`.
+- 📸 On failure, a screenshot is captured, stored, and linked in the Allure report.
+- ♻️ All screenshots and logs are reset cleanly before every run in the `target/` folder.
+
+This setup makes it easier to:
+
+- Identify bugs faster 🔍  
+- Debug test failures with logs + visuals 📋📷  
+- Integrate seamlessly into CI/CD pipelines ⚙️  
+- Avoid repetitive login steps = faster test cycles ⚡
+
+
+
+---
 
 ## ✅ Example Test Scenario
 
+**Automated Login Validation on [Automation Exercise](https://www.automationexercise.com/):**
 
-
-**Automated Login Validation on Automation Exercise:**
-
-- Visit login page
-
-- Enter valid credentials
-
-- Validate successful login
-
-
+1. 🧭 Visit the login page  
+2. 🔐 Enter valid credentials (loaded securely from `.env`)  
+3. 🎯 Validate successful login  
+4. 🍪 Save session cookies to `cookies.json`  
+5. ⚡ On the next run, reuse cookies to skip login (if still valid)
 
 Only relevant and necessary code is maintained for clarity and readability.
 
