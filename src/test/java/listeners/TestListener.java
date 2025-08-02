@@ -61,20 +61,23 @@ public class TestListener implements ITestListener {
         }
     }
 
-    @Overridepublic void onTestStart(ITestResult result) {
+    @Override
+    public void onTestStart(ITestResult result) {
         String msg = "TEST STARTED: " + result.getMethod().getMethodName();
         Reporter.log(msg, true);
         logToFile(msg);
     }
 
 
-    @Overridepublic void onTestSuccess(ITestResult result) {
+    @Override
+    public void onTestSuccess(ITestResult result) {
         String msg = "TEST PASSED: " + result.getMethod().getMethodName();
         Reporter.log(msg, true);
         logToFile(msg);
     }
 
-    @Overridepublic void onTestFailure(ITestResult result) {
+    @Override
+    public void onTestFailure(ITestResult result) {
         String msg = "TEST FAILED: " + result.getMethod().getMethodName();
         Reporter.log(msg, true);
         logToFile(msg);
@@ -93,7 +96,8 @@ public class TestListener implements ITestListener {
     }
 
 
-    @Overridepublic void onTestSkipped(ITestResult result) {
+    @Override
+    public void onTestSkipped(ITestResult result) {
         String msg = "TEST SKIPPED: " + result.getMethod().getMethodName();
         Reporter.log(msg, true);
         logToFile(msg);
