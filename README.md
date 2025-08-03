@@ -161,4 +161,7 @@ Only relevant and necessary code is maintained for clarity and readability.
 
 
 
-Read the full article: [Test Smarter, Not Harder: Detailed Failure Debugging in Selenium](https://qabrains.com/test-smarter-not-harder-detailed-failure-debugging-in-selenium)
+Read the full articles: 
+- [Test Smarter, Not Harder: Detailed Failure Debugging in Selenium](https://qabrains.com/test-smarter-not-harder-detailed-failure-debugging-in-selenium)
+
+- [Cut Login Time, Boost Test Speed: Cookie-Powered QA Automation](https://qabrains.com/cut-login-time-boost-test-speed-cookie-powered-qa-automation)
