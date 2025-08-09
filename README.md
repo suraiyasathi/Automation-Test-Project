@@ -131,7 +131,7 @@ allure serve target/allure-results
 
 - Integrated Allure reports combined with intelligent error handling ensure that any failures are logged clearly, simplifying debugging.
 
-## 💡 The Takeaway
+### 💡 The Takeaway
 By combining JSON-driven data, a dynamic DataProvider, a universal form filler, and detailed Allure reports, tedious and repetitive form testing transforms into a smooth, adaptive, and highly maintainable automation system.
 
 This is not just automation — it is automation with style.
@@ -180,7 +180,7 @@ Only relevant and necessary code is maintained for clarity and readability.
 
 
 
-## 🔗 Reference
+## 🔗 References
 
 
 
@@ -190,3 +190,12 @@ Read the full articles:
 - [Cut Login Time, Boost Test Speed: Cookie-Powered QA Automation](https://qabrains.com/cut-login-time-boost-test-speed-cookie-powered-qa-automation)
 
 - [The Ultimate Selenium Hack -- One Script to Fill Any Form, Anywhere]()
+
+---
+## Allure Report
+
+The test automation suite generates detailed Allure reports that provide clear insights into test execution, including step-by-step actions, screenshots on failure, and logs.
+
+Below is an example screenshot from the Allure report:
+
+![Allure Report Example](reports/allure-report.png)
