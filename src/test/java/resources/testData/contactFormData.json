@@ -1,0 +1,16 @@
+{
+  "testData1": {
+    "name": "Test Name 1",
+    "email": "test1@example.com",
+    "subject": "Test Automation Message",
+    "message": "This is a test message",
+    "upload_file": "{projectRoot}/src/test/java/resources/testData/uploads/image1.jpg"
+  },
+  "testData2": {
+    "name": "Test Name2",
+    "email": "test2@example.com",
+    "subject": "Test Automation Message",
+    "message": "This is a test message",
+    "upload_file": "{projectRoot}/src/test/java/resources/testData/uploads/image2.jpg"
+  }
+}

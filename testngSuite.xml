@@ -3,9 +3,15 @@
     <listeners>
         <listener class-name="listeners.TestListener"/>
     </listeners>
-    <test name = "Test">
+    <test name="Login">
         <classes>
             <class name="testCases.LoginTest"/>
+        </classes>
+    </test>
+    <test name="Contact Us">
+        <parameter name="jsonFilePath" value="src/test/java/resources/testData/contactFormData.json" />
+        <classes>
+            <class name="testCases.ContactFormTest"/>
         </classes>
     </test>
 </suite>

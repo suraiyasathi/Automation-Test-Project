@@ -12,8 +12,8 @@ import org.openqa.selenium.support.ui.Wait;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeSuite;
-import utilities.Data;
-import utilities.EnvReader;
+import utils.Data;
+import utils.EnvReader;
 
 import java.time.Duration;
 import java.util.NoSuchElementException;

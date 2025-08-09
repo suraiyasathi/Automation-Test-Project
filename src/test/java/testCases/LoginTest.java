@@ -6,11 +6,11 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 import pages.HomePage;
 import pages.LoginPage;
-import utilities.CookieManager;
-import utilities.Data;
-import utilities.EnvReader;
+import utils.CookieManager;
+import utils.Data;
+import utils.EnvReader;
 
-@Epic("Login")
+@Epic("Automation Exercise")
 @Feature("Login to your account")
 public class LoginTest extends BaseClass {
     static HomePage homePage;

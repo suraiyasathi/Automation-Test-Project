@@ -15,4 +15,10 @@ public class HomePage extends BasePage {
     public WebElement getLoginFromNavBar() {
         return loginFromNavBar;
     }
+
+    @FindBy(css = "a[href='/contact_us']")
+    private WebElement contactUsFromNavBar;
+    public WebElement getContactUsFromNavBar() {
+        return contactUsFromNavBar;
+    }
 }
