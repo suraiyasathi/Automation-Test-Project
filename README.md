@@ -189,7 +189,7 @@ Read the full articles:
 
 - [Cut Login Time, Boost Test Speed: Cookie-Powered QA Automation](https://qabrains.com/cut-login-time-boost-test-speed-cookie-powered-qa-automation)
 
-- [The Ultimate Selenium Hack -- One Script to Fill Any Form, Anywhere]()
+- [The Ultimate Selenium Hack -- One Script to Fill Any Form, Anywhere](https://qabrains.com/cut-login-time-boost-test-speed-cookie-powered-qa-automation)
 
 ---
 ## Allure Report
